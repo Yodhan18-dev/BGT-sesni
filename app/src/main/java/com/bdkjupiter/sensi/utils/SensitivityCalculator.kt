@@ -30,7 +30,7 @@ object SensitivityCalculator {
             name.contains("oneplus") || name.contains("one plus") || name.contains("samsung") || name.contains("galaxy") ->
                 Brand.ONEPLUS_SAMSUNG
             name.contains("infinix") || name.contains("realme") -> Brand.INFINIX_REALME
-            else -> Brand.ONEPLUS_SAMSUNG // default fallback
+            else -> Brand.ONEPLUS_SAMSUNG
         }
     }
 
@@ -51,46 +51,105 @@ object SensitivityCalculator {
             Brand.INFINIX_REALME -> 447
         }
 
-        // General sensitivity RAM adjustment
         val generalRamAdj = when (brand) {
             Brand.REDMI_POCO_XIAOMI -> when (ram) {
-                2 -> +12; 3 -> +8; 4 -> +4; 6 -> 0; 8 -> -4; 12 -> -12; 16 -> -18; else -> 0
+                2 -> +12
+                3 -> +8
+                4 -> +4
+                6 -> 0
+                8 -> -4
+                12 -> -12
+                16 -> -18
+                else -> 0
             }
             Brand.VIVO_OPPO -> when (ram) {
-                2 -> +16; 3 -> +14; 4 -> +10; 6 -> 0; 8 -> -4; 12 -> -10; 16 -> -12; else -> 0
+                2 -> +16
+                3 -> +14
+                4 -> +10
+                6 -> 0
+                8 -> -4
+                12 -> -10
+                16 -> -12
+                else -> 0
             }
             Brand.IQOO -> when (ram) {
-                2 -> +8; 3 -> +6; 4 -> -8; 6 -> -10; 8 -> -18; 12 -> -20; 16 -> -25; else -> 0
+                2 -> +8
+                3 -> +6
+                4 -> -8
+                6 -> -10
+                8 -> -18
+                12 -> -20
+                16 -> -25
+                else -> 0
             }
             Brand.ONEPLUS_SAMSUNG -> when (ram) {
-                2 -> +26; 3 -> +24; 4 -> +20; 6 -> +15; 8 -> +8; 12 -> +5; 16 -> +4; else -> 0
+                2 -> +26
+                3 -> +24
+                4 -> +20
+                6 -> +15
+                8 -> +8
+                12 -> +5
+                16 -> +4
+                else -> 0
             }
             Brand.INFINIX_REALME -> when (ram) {
-                2 -> +12; 3 -> +8; 4 -> +4; 6 -> +1; 8 -> -4; 12 -> -5; 16 -> -6; else -> 0
+                2 -> +12
+                3 -> +8
+                4 -> +4
+                6 -> +1
+                8 -> -4
+                12 -> -5
+                16 -> -6
+                else -> 0
             }
         }
 
-        // DPI RAM adjustment
         val dpiRamAdj = when (brand) {
             Brand.REDMI_POCO_XIAOMI -> when (ram) {
-                2 -> +8; 3 -> +6; 4 -> +4; 6 -> +2; 8 -> -2; 12 -> -4; 16 -> -6; else -> 0
+                2 -> +8
+                3 -> +6
+                4 -> +4
+                6 -> +2
+                8 -> -2
+                12 -> -4
+                16 -> -6
+                else -> 0
             }
             else -> when (ram) {
-                2 -> +10; 3 -> +9; 4 -> +8; 6 -> +6; 8 -> 0; 12 -> -2; 16 -> -8; else -> 0
+                2 -> +10
+                3 -> +9
+                4 -> +8
+                6 -> +6
+                8 -> 0
+                12 -> -2
+                16 -> -8
+                else -> 0
             }
         }
 
-        // Fire button size
         val fireButton = when (brand) {
             Brand.REDMI_POCO_XIAOMI -> when (ram) {
-                2 -> 44; 3 -> 43; 4 -> 46; 6 -> 48; 8 -> 48; 12 -> 50; 16 -> 52; else -> 48
+                2 -> 44
+                3 -> 43
+                4 -> 46
+                6 -> 48
+                8 -> 48
+                12 -> 50
+                16 -> 52
+                else -> 48
             }
             else -> when (ram) {
-                2 -> 42; 3 -> 42; 4 -> 44; 6 -> 46; 8 -> 48; 12 -> 48; 16 -> 50; else -> 46
+                2 -> 42
+                3 -> 42
+                4 -> 44
+                6 -> 46
+                8 -> 48
+                12 -> 48
+                16 -> 50
+                else -> 46
             }
         }
 
-        // Storage adjustment: below 128 → +2 on all, above 128 → -2 on all
         val storageAdj = if (storageGb < 128) +2 else -2
 
         val general = baseGeneral + generalRamAdj + storageAdj
