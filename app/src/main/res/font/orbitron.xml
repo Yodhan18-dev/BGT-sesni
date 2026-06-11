@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!-- 
-  Place the Orbitron-Bold.ttf font file here and rename it to orbitron.ttf
-  Download from: https://fonts.google.com/specimen/Orbitron
-  Then remove this XML file and the .ttf will be used automatically.
--->
-<font-family xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
-</font-family>
