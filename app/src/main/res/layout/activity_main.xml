@@ -19,7 +19,6 @@
         android:background="@color/card_dark"
         app:itemIconTint="@color/nav_color_selector"
         app:itemTextColor="@color/nav_color_selector"
-        app:menu="@menu/bottom_nav_menu"
-        app:itemActiveIndicatorColor="@color/neon_cyan_20" />
+        app:menu="@menu/bottom_nav_menu" />
 
 </LinearLayout>

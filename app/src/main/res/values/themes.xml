@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <style name="Theme.BDKJupiter" parent="Theme.Material3.Dark.NoActionBar">
+    <style name="Theme.BDKJupiter" parent="Theme.MaterialComponents.DayNight.NoActionBar">
         <item name="colorPrimary">@color/neon_cyan</item>
         <item name="colorPrimaryVariant">@color/neon_blue</item>
         <item name="colorOnPrimary">@color/bg_dark</item>
