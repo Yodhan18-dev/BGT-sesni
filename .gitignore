@@ -1,15 +1,14 @@
+# Android
 *.iml
 .gradle
 /local.properties
-/.idea/caches
-/.idea/libraries
-/.idea/modules.xml
-/.idea/workspace.xml
-/.idea/navEditor.xml
-/.idea/assetWizardSettings.xml
+/.idea/
 .DS_Store
 /build
 /captures
 .externalNativeBuild
 .cxx
-local.properties
+
+# Do NOT ignore gradle-wrapper.jar if you commit it
+# If using CI regeneration (our approach), the jar is not needed in repo
+gradle/wrapper/gradle-wrapper.jar
