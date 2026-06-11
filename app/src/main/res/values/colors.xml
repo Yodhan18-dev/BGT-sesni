@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Background -->
+    <color name="bg_dark">#0A0A0F</color>
+    <color name="card_dark">#12121A</color>
+    <color name="card_dark_2">#1A1A25</color>
+
+    <!-- Neon colors -->
+    <color name="neon_cyan">#00FFFF</color>
+    <color name="neon_cyan_20">#3300FFFF</color>
+    <color name="neon_blue">#0080FF</color>
+    <color name="neon_green">#00FF88</color>
+    <color name="neon_pink">#FF0080</color>
+
+    <!-- Text -->
+    <color name="text_primary">#EAEAEA</color>
+    <color name="text_secondary">#888899</color>
+
+    <!-- Divider -->
+    <color name="divider">#1F1F2E</color>
+
+    <!-- Nav -->
+    <color name="nav_active">#00FFFF</color>
+    <color name="nav_inactive">#555566</color>
+
+    <!-- Legacy Material -->
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+</resources>
