@@ -20,7 +20,7 @@
             android:textSize="16sp"
             android:textStyle="bold"
             android:letterSpacing="0.15"
-            android:fontFamily="@font/orbitron"
+            android:fontFamily="sans-serif-condensed"
             android:layout_marginBottom="16dp" />
 
         <!-- Input Form Card -->
@@ -43,8 +43,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-                    app:boxStrokeColor="@color/neon_cyan"
-                    app:hintTextColor="@color/neon_cyan"
+                    app:boxStrokeColor="@color/input_stroke_color"
+                    app:hintTextColor="@color/input_hint_color"
                     android:layout_marginBottom="12dp">
                     <com.google.android.material.textfield.TextInputEditText
                         android:id="@+id/etUsername"
@@ -61,8 +61,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-                    app:boxStrokeColor="@color/neon_cyan"
-                    app:hintTextColor="@color/neon_cyan"
+                    app:boxStrokeColor="@color/input_stroke_color"
+                    app:hintTextColor="@color/input_hint_color"
                     android:layout_marginBottom="12dp">
                     <com.google.android.material.textfield.TextInputEditText
                         android:id="@+id/etMobileName"
@@ -79,8 +79,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-                    app:boxStrokeColor="@color/neon_cyan"
-                    app:hintTextColor="@color/neon_cyan"
+                    app:boxStrokeColor="@color/input_stroke_color"
+                    app:hintTextColor="@color/input_hint_color"
                     android:layout_marginBottom="12dp">
                     <com.google.android.material.textfield.TextInputEditText
                         android:id="@+id/etMobileModel"
@@ -97,8 +97,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-                    app:boxStrokeColor="@color/neon_cyan"
-                    app:hintTextColor="@color/neon_cyan"
+                    app:boxStrokeColor="@color/input_stroke_color"
+                    app:hintTextColor="@color/input_hint_color"
                     android:layout_marginBottom="12dp">
                     <com.google.android.material.textfield.TextInputEditText
                         android:id="@+id/etRam"
@@ -115,8 +115,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-                    app:boxStrokeColor="@color/neon_cyan"
-                    app:hintTextColor="@color/neon_cyan"
+                    app:boxStrokeColor="@color/input_stroke_color"
+                    app:hintTextColor="@color/input_hint_color"
                     android:layout_marginBottom="12dp">
                     <com.google.android.material.textfield.TextInputEditText
                         android:id="@+id/etStorage"
@@ -133,8 +133,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-                    app:boxStrokeColor="@color/neon_cyan"
-                    app:hintTextColor="@color/neon_cyan"
+                    app:boxStrokeColor="@color/input_stroke_color"
+                    app:hintTextColor="@color/input_hint_color"
                     android:layout_marginBottom="16dp">
                     <com.google.android.material.textfield.TextInputEditText
                         android:id="@+id/etMobileAge"
@@ -215,7 +215,7 @@
                     android:textColor="@color/neon_cyan"
                     android:textSize="16sp"
                     android:textStyle="bold"
-                    android:fontFamily="@font/orbitron"
+                    android:fontFamily="sans-serif-condensed"
                     android:layout_marginBottom="16dp" />
 
                 <TextView android:id="@+id/tvResultUsername"
@@ -235,9 +235,6 @@
                     android:background="@color/divider" android:layout_marginBottom="16dp" />
 
                 <!-- Result Rows -->
-                <include layout="@layout/item_result_row"
-                    android:id="@+id/rowGeneral" />
-
                 <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
                     android:orientation="horizontal" android:layout_marginBottom="10dp">
                     <TextView android:layout_width="0dp" android:layout_height="wrap_content"

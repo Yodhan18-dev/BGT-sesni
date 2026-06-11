@@ -23,7 +23,7 @@
             android:textSize="16sp"
             android:textStyle="bold"
             android:letterSpacing="0.15"
-            android:fontFamily="@font/orbitron" />
+            android:fontFamily="sans-serif-condensed" />
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/btnClearHistory"

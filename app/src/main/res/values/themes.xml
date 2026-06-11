@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <style name="Theme.BDKJupiter" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+    <style name="Theme.BDKJupiter" parent="Theme.MaterialComponents.NoActionBar">
         <item name="colorPrimary">@color/neon_cyan</item>
         <item name="colorPrimaryVariant">@color/neon_blue</item>
         <item name="colorOnPrimary">@color/bg_dark</item>
@@ -14,11 +14,11 @@
         <item name="android:windowBackground">@color/bg_dark</item>
         <item name="android:statusBarColor">@color/bg_dark</item>
         <item name="android:navigationBarColor">@color/bg_dark</item>
+        <item name="android:windowLightStatusBar">false</item>
     </style>
 
     <style name="Theme.BDKJupiter.Splash" parent="Theme.BDKJupiter">
         <item name="android:windowBackground">@color/bg_dark</item>
-        <item name="android:windowFullscreen">false</item>
     </style>
 
 </resources>
