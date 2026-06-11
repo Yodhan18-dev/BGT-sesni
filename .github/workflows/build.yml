@@ -21,8 +21,11 @@ jobs:
           java-version: '17'
           distribution: 'temurin'
 
+      - name: Setup Android SDK
+        uses: android-actions/setup-android@v3
+
       - name: Setup Gradle
-        uses: gradle/actions/setup-gradle@v3
+        uses: gradle/actions/setup-gradle@v4
         with:
           gradle-version: '8.7'
 
@@ -30,7 +33,9 @@ jobs:
         run: |
           gradle wrapper --gradle-version 8.7 --distribution-type bin
           chmod +x gradlew
-          ls -lh gradle/wrapper/gradle-wrapper.jar
+
+      - name: Write local.properties
+        run: echo "sdk.dir=$ANDROID_HOME" > local.properties
 
       - name: Cache Gradle packages
         uses: actions/cache@v4
@@ -43,7 +48,7 @@ jobs:
             ${{ runner.os }}-gradle-
 
       - name: Build Debug APK
-        run: ./gradlew assembleDebug --stacktrace
+        run: ./gradlew assembleDebug --stacktrace --no-build-cache
 
       - name: Upload Debug APK
         uses: actions/upload-artifact@v4
@@ -53,7 +58,7 @@ jobs:
           retention-days: 30
 
       - name: Build Release APK (unsigned)
-        run: ./gradlew assembleRelease --stacktrace
+        run: ./gradlew assembleRelease --stacktrace --no-build-cache
 
       - name: Upload Release APK
         uses: actions/upload-artifact@v4
